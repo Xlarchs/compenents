@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="card">
+    <div class="container-fliud">
+      <div class="wrapper row">
+        <div class="preview col-md-8">
+
+          <div class="preview-pic tab-content">
+            <full-calendar
+[options]="calendarOptions">
+            </full-calendar>
+          </div>
+        </div>
+        <div class="details col-md-4">
+          <div class="container outer_calendar">
+            <div class="tickets disabled">
+              <div class="return_to_cal">
+               <div class="text">Return to Calendar</div>
+              </div>
+              <div class="subby">Passengers</div>
+              <div class="input_row adults">
+                <div class="option_title">Adults</div>
+                <div class="ticket_count">
+                  <div class="minus">&#8212;</div>
+                  <div class="qty"><input type="text" value="0" readonly /></div>
+                  <div class="add">+</div>
+                </div>
+                <div class="warning">You need at least one adult ticket!</div>
+              </div>
+
+              <div class="input_row">
+                <div class="subby">Price</div>
+                <div class="total">Total</div>
+                <div id="totalFT" class="price">$00.00</div>
+              </div>
+              <div class="subby">Discount Code</div>
+              <div class="discount_input">
+                <input type="text" name="CouponCode" value="" onkeypress="clearFlightWarning();" />
+              </div>
+              <div class="warning" id="flight-discount-warning">Discount code invalid!</div>
+              <div id="flight-coupon-apply" class="btn yellow" onclick="updateTotalWithDiscount();">Apply Discount</div>
+              <input type="submit" class="btn" value="Continue" onclick="stepFourA(true);" />
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
